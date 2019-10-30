@@ -7,12 +7,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <LandingPage />
-      </div>
+      <Switch>
+        <Route path='/' render={() => <LandingPage/>} />
+      </Switch>
     );
   }
 
 }
 
-export default App;
+export default withRouter(App);
